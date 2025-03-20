@@ -46,7 +46,11 @@
     margin-left: 1rem;
   }
 
-  
+  @media (max-width: 768px) {
+    .titleContainer {
+      border-bottom: none;
+    }
+  }
   
   @media (max-width: 450px) {
     .textLine1 {
@@ -59,9 +63,6 @@
     .coin {
         width: 4rem;
     }
-    .titleContainer {
-        border-bottom: none;
     
-      }
 
   }

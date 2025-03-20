@@ -8,7 +8,7 @@ import ShopPage from "./pages/ShopPage";
 import ProductPage from "./pages/ProductPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
-import CartPage from "./pages/CartPage";
+import ServicesPage from "./pages/ServicesPage";
 import "./styles/App.css";
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
               path="/product/:id"
               element={<ProductPage />}
             />
+            <Route path= '/services' element={<ServicesPage/>}></Route>
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             

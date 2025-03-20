@@ -70,6 +70,11 @@ nav {
   cursor: pointer;
   color: var(--light);
   font-size: 1.5rem;
+  transition: all 0.3s ease;
+  z-index: 1001;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
 .search-cart {
@@ -103,32 +108,46 @@ nav {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+  .container {
+    position: relative;
+  }
+  
   .logo-img {
     max-width: 240px;
   }
-
-  .nav-menu {
-    position: fixed;
-    top: 70px;
-    left: -100%;
-    flex-direction: column;
-    background-color: var(--primary);
-    width: 100%;
-    padding: 2rem;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
-    text-align: center;
-  }
-
-  .nav-menu.active {
-    left: 0;
-  }
-
-  .nav-item {
-    margin: 1.5rem 0;
-  }
-
+  
   .menu-icon {
     display: block;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: var(--primary);
+    z-index: 1000;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    padding-top: 70px;
+  }
+  
+  nav.active {
+    left: 0;
+  }
+  
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: static;
+    box-shadow: none;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin: 1rem 0;
   }
 }

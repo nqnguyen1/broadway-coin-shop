@@ -1,0 +1,315 @@
+/* styles/ServicesPage.css */
+.services-hero {
+    background: linear-gradient(rgba(33, 33, 33, 0.8), rgba(33, 33, 33, 0.9)), url('/images/services-background.jpg') center/cover no-repeat;
+    padding: 6rem 0;
+    text-align: center;
+    color: var(--light);
+    margin-bottom: 4rem;
+  }
+  
+  .services-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .services-content {
+    color: var(--light);
+  }
+  
+  .services-content section {
+    margin-bottom: 5rem;
+  }
+  
+  .services-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    font-weight: normal;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .services-content h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .services-intro, .rates-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    line-height: 1.7;
+  }
+  
+  /* Main Services Section */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .service-card {
+    background-color: var(--primary);
+    border-radius: 4px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--gray-dark);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--secondary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .service-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--secondary);
+    color: var(--dark);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: normal;
+  }
+  
+  .service-card > p {
+    margin-bottom: 1.5rem;
+    color: var(--gray-light);
+    line-height: 1.6;
+  }
+  
+  .service-details {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .service-details li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--gray-dark);
+    color: var(--gray-light);
+  }
+  
+  .service-details li:last-child {
+    border-bottom: none;
+  }
+  
+  .service-details li::before {
+    content: '✓';
+    color: var(--secondary);
+    margin-right: 0.5rem;
+  }
+  
+  /* Service Process Section */
+  .process-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+  
+  .process-step {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary);
+    color: var(--dark);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .process-step h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--light);
+    font-weight: normal;
+  }
+  
+  .process-step p {
+    color: var(--gray-light);
+  }
+  
+  /* Service Rates Section */
+  .rates-tables {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .rate-table {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    background-color: var(--primary);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--gray-dark);
+  }
+  
+  .rate-table h3 {
+    background-color: var(--secondary);
+    color: var(--dark);
+    padding: 1rem;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.3rem;
+  }
+  
+  .rate-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .rate-table th,
+  .rate-table td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-dark);
+  }
+  
+  .rate-table th {
+    color: var(--light);
+    font-weight: 600;
+  }
+  
+  .rate-table td {
+    color: var(--gray-light);
+  }
+  
+  .rate-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* Call to Action */
+  .services-cta {
+    background-color: var(--primary);
+    border-radius: 4px;
+    padding: 3rem;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--gray-dark);
+  }
+  
+  .services-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+  }
+  
+  .services-cta h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .services-cta p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+  
+  .services-cta .btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .services-hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .services-content h2,
+    .services-cta h2 {
+      font-size: 1.8rem;
+    }
+    
+    .services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .process-steps {
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .services-hero {
+      padding: 4rem 0;
+    }
+    
+    .services-hero h1 {
+      font-size: 2rem;
+    }
+    
+    .services-content h2,
+    .services-cta h2 {
+      font-size: 1.5rem;
+    }
+    
+    .service-card {
+      padding: 1.5rem;
+    }
+    
+    .services-cta {
+      padding: 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .process-step {
+      min-width: 100%;
+    }
+    
+    .rate-table {
+      min-width: 100%;
+    }
+  }

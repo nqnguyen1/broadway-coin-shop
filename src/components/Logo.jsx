@@ -16,7 +16,7 @@ export default function Logo() {
     return (
     <div className= "titleContainer">
          {
-         width > 700 ? (
+         width > 768 ? (
               <h1 className= "title">Broadway Coin & Stamp Exchange</h1>
             ) :
         <div className="logoJS">

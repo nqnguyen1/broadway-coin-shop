@@ -1,9 +1,10 @@
 // components/Header.js
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logoImage from "../assets/images/broadway-logo.png";
 import Logo from "./Logo";
 import "../styles/Header.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Header = React.memo(() => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,15 +18,16 @@ const Header = React.memo(() => {
       <div className="container">
         <div className="logo-container">
           <Link to="/">
-            <Logo></Logo>
+            <Logo />
           </Link>
         </div>
-        <nav>
-          <div className="menu-icon" onClick={toggleMenu}>
-            <i className={`fas ${menuOpen ? "fa-times" : "fa-bars"}`}></i>
-          </div>
-
-          <ul className={`nav-menu ${menuOpen ? "active" : ""}`}>
+        
+        <div className="menu-icon" onClick={toggleMenu}>
+          <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
+        </div>
+        
+        <nav className={menuOpen ? "active" : ""}>
+          <ul className="nav-menu">
             <li className="nav-item">
               <Link
                 to="/"
@@ -72,8 +74,6 @@ const Header = React.memo(() => {
               </Link>
             </li>
           </ul>
-
-
         </nav>
       </div>
     </header>
