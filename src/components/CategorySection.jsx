@@ -2,38 +2,40 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/CategorySection.css";
+import placeholder from "../assets/images/placeholder.jpg";
+
 
 const categories = [
   {
     id: 1,
-    name: "Gold Coins",
-    image: "/images/categories/gold-coins.jpg",
-    slug: "gold-coins",
+    name: "US Coins",
+    image: "../assets/images/placeholder.jpg",
+    slug: "us-coins",
   },
   {
     id: 2,
-    name: "Silver Coins",
-    image: "/images/categories/silver-coins.jpg",
-    slug: "silver-coins",
+    name: "World Coins",
+    image: "../assets/images/placeholder.jpg",
+    slug: "world-coins",
   },
   {
     id: 3,
-    name: "Rare Stamps",
-    image: "/images/categories/rare-stamps.jpg",
-    slug: "rare-stamps",
+    name: "Bullion",
+    image: "../assets/images/placeholder.jpg",
+    slug: "rare-bullions",
   },
   {
     id: 4,
-    name: "Commemorative",
-    image: "/images/categories/commemorative.jpg",
-    slug: "commemorative",
+    name: "Currency",
+    image: "../assets/images/placeholder.jpg",
+    slug: "currency",
   },
-  {
-    id: 5,
-    name: "Ancient Coins",
-    image: "/images/categories/ancient-coins.jpg",
-    slug: "ancient-coins",
-  },
+  // {
+  //   id: 5,
+  //   name: "Ancient Coins",
+  //   image: "../assets/images/placeholder.jpg",
+  //   slug: "ancient-coins",
+  // },
 ];
 
 const CategorySection = () => {
@@ -54,13 +56,10 @@ const CategorySection = () => {
               className="category-card"
             >
               <img
-                src={category.image}
+                src= "http://broadwaycoin.com/images/placeholder.jpg"
                 alt={category.name}
                 className="category-img"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = "/images/placeholder.jpg";
-                }}
+
               />
               <div className="category-name">{category.name}</div>
             </Link>

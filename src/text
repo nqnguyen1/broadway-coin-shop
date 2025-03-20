@@ -8,9 +8,47 @@ from inventory excel sheet
 -> export as csv
 -> run script to remove all commas and create seperate column for denominator so numerical value and sign (cent) are seperated
   -> can add more sanitation if needed
+
+
+IDEAS
+for images, establish a naming convention for each image when uploaded to godaddy file manager that uses a unique identifier (like inventory number) so it can be access when inventory is rendered
+
+  for example: 
+  {
+        "Inv_NUM": "14383",
+        "Country": "US",
+        "Date": "1955 Bugs Bunny",
+        "Denomination": "50c",
+        "Type": "Franklin",
+        "Grade": "MS-63",
+        "Cost_Code": "AATR",
+        "Date_Code": "HBTA",
+        "Cost": "$15.00",
+        "Price": "20.0",
+        "Profit": "18.0",
+        "Status": "Available",
+        "DateEntered": "2410",
+        "Denomination_Value": "50",
+        "Denomination_Unit": "c"
+    },
+      the picture for this should be named imageAPIkey_14383
+        if there is a second picture for this it should be named imageAPIkey_14383-b
+      then this picture can now be access at http://broadwaycoin.com/images/imageAPIkey_14383
+
+      then we can use the product itself to create the src url path without having to store the path
+
 Questions
 how are data currently being entered
 
 the comma for currency was messing  with the data import
 
-are you able to come up with what you want for the category and subcategory
+us coins world coins boullion currency
+what do you mean by currency?
+will need help with sorting logic 
+
+
+TO DO
+categorysection.jsx find stock image for each category and replace the stock image
+
+
+
