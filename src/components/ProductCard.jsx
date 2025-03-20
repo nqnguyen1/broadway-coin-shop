@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/ProductCard.css";
 
-const ProductCard = ({ product, addToCart }) => {
+const ProductCard = React.memo(({ product, addToCart }) => {
   const handleAddToCart = (e) => {
     e.preventDefault();
     addToCart(product);
@@ -44,6 +44,6 @@ const ProductCard = ({ product, addToCart }) => {
       </Link>
     </div>
   );
-};
+});
 
 export default ProductCard;

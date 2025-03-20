@@ -1,0 +1,67 @@
+.title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    color: var(--secondary);
+
+  }
+.titleContainer {
+    text-align: center;
+    padding: 0 2rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: .5rem;
+
+  }
+
+.logoJS {
+    display: flex;
+    align-items: center;
+  }
+
+.textLine1 {
+    font-size: 1.9rem;
+    letter-spacing: 0.1em; /* Space out the letters */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+    margin: 0;
+  }
+  
+  .underline {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin: 0 auto;
+  }
+  
+  .textLine2 {
+    font-size: 1.9rem;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    color: var(--secondary);
+  }
+
+  .coin{
+    width: 5rem;
+    height: auto;
+    margin-left: 1rem;
+  }
+
+  
+  
+  @media (max-width: 450px) {
+    .textLine1 {
+      font-size: 1rem;
+    }
+    .textLine2 {
+      font-size: 1rem;
+    }
+
+    .coin {
+        width: 4rem;
+    }
+    .titleContainer {
+        border-bottom: none;
+    
+      }
+
+  }

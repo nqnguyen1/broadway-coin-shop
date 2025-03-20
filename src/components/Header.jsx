@@ -2,9 +2,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logoImage from "../assets/images/broadway-logo.png";
+import Logo from "./Logo";
 import "../styles/Header.css";
 
-const Header = ({ cartItemsCount }) => {
+const Header = React.memo(() => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -16,11 +17,7 @@ const Header = ({ cartItemsCount }) => {
       <div className="container">
         <div className="logo-container">
           <Link to="/">
-            <img
-              src={logoImage}
-              alt="Broadway Coin & Stamp"
-              className="logo-img"
-            />
+            <Logo></Logo>
           </Link>
         </div>
         <nav>
@@ -40,20 +37,11 @@ const Header = ({ cartItemsCount }) => {
             </li>
             <li className="nav-item">
               <Link
-                to="/shop?category=coins"
+                to="/shop"
                 className="nav-link"
                 onClick={() => setMenuOpen(false)}
               >
                 Coins
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/shop?category=stamps"
-                className="nav-link"
-                onClick={() => setMenuOpen(false)}
-              >
-                Stamps
               </Link>
             </li>
             <li className="nav-item">
@@ -85,24 +73,11 @@ const Header = ({ cartItemsCount }) => {
             </li>
           </ul>
 
-          <div className="search-cart">
-            <Link to="/search">
-              <i className="fas fa-search"></i>
-            </Link>
-            <Link to="/cart">
-              <i className="fas fa-shopping-cart"></i>
-              {cartItemsCount > 0 && (
-                <span className="cart-count">{cartItemsCount}</span>
-              )}
-            </Link>
-            <Link to="/account">
-              <i className="fas fa-user"></i>
-            </Link>
-          </div>
+
         </nav>
       </div>
     </header>
   );
-};
+});
 
 export default Header;

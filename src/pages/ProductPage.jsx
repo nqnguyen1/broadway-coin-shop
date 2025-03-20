@@ -5,7 +5,7 @@ import { getProductById, getRelatedProducts } from "../services/productService";
 import ProductCard from "../components/ProductCard";
 import "../styles/ProductPage.css";
 
-const ProductPage = ({ addToCart }) => {
+const ProductPage = React.memo(({ addToCart }) => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [relatedProducts, setRelatedProducts] = useState([]);
@@ -343,6 +343,6 @@ const ProductPage = ({ addToCart }) => {
       </div>
     </div>
   );
-};
+});
 
 export default ProductPage;

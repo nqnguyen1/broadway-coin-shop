@@ -8,21 +8,21 @@ const testimonials = [
     text: "I've been collecting coins for over 20 years, and Broadway Coin & Stamp has consistently provided the most authentic and fairly priced pieces. Their expertise and customer service are unmatched.",
     author: "James Miller",
     position: "Coin Collector",
-    image: "/images/testimonials/james.jpg",
+    // image: "/images/testimonials/james.jpg",
   },
   {
     id: 2,
     text: "As a philatelist, finding rare stamps can be challenging. Broadway's extensive collection and knowledgeable staff have made building my collection a joy. I highly recommend them to all stamp enthusiasts.",
     author: "Sarah Thompson",
     position: "Stamp Collector",
-    image: "/images/testimonials/sarah.jpg",
+    // image: "/images/testimonials/sarah.jpg",
   },
   {
     id: 3,
     text: "The appraisal service at Broadway Coin & Stamp is exceptional. Their detailed assessment helped me understand the true value of my inherited collection. Professional, thorough, and trustworthy.",
     author: "Robert Chen",
     position: "Estate Collector",
-    image: "/images/testimonials/robert.jpg",
+    // image: "/images/testimonials/robert.jpg",
   },
 ];
 
