@@ -1,0 +1,64 @@
+/* src/index.css */
+@import url("https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+/* Add to your index.css */
+img {
+  content-visibility: auto;
+  width: 100%;
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+:root {
+  --primary: #333333;
+  --secondary: #dba628;
+  --accent: #f4bc24;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --success: #28a745;
+  --gray: #6c757d;
+  --gray-light: #f1f1f1;
+  --gray-dark: #444444;
+  --background: #484848;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #17a2b8;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: var(--background);
+  color: var(--light);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

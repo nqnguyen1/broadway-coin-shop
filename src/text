@@ -1,0 +1,16 @@
+mysql 
+username: ngnguyen
+password: k7,Ts`A%@6b7
+api: ab301ece-c99b-486c-9785-9871d9c034a1
+
+notes
+from inventory excel sheet
+-> export as csv
+-> run script to remove all commas and create seperate column for denominator so numerical value and sign (cent) are seperated
+  -> can add more sanitation if needed
+Questions
+how are data currently being entered
+
+the comma for currency was messing  with the data import
+
+are you able to come up with what you want for the category and subcategory

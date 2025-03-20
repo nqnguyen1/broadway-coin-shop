@@ -1,0 +1,55 @@
+/* styles/CategorySection.css */
+.featured {
+  padding: 4rem 0;
+}
+
+.featured-categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.category-card {
+  background-color: var(--primary);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid var(--gray-dark);
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-color: var(--secondary);
+}
+
+.category-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--secondary);
+}
+
+.category-name {
+  padding: 1rem;
+  font-weight: 600;
+  color: var(--light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 576px) {
+  .category-card {
+    width: 160px;
+  }
+
+  .category-img {
+    height: 120px;
+  }
+}
