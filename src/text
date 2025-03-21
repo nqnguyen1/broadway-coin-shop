@@ -10,6 +10,8 @@ from inventory excel sheet
   -> can add more sanitation if needed
 
 
+
+
 IDEAS
 for images, establish a naming convention for each image when uploaded to godaddy file manager that uses a unique identifier (like inventory number) so it can be access when inventory is rendered
 
@@ -37,6 +39,11 @@ for images, establish a naming convention for each image when uploaded to godadd
 
       then we can use the product itself to create the src url path without having to store the path
 
+write the logic to add a "category" and "description" in the python file when uploading data. Maybe here we can also add the image category to go the image path -> "image": "http://broadwaycoin.com/images/imageAPIkey_14383"
+for description make is so if there is not already a description, the default description should be -> `This ${product.Date} ${product.Type} is a valuable addition to any collection. ${product.Grade ? `Graded ${product.Grade}, ` : ''}this piece represents an excellent example of ${product.Country || ''} coinage.`
+
+
+
 Questions
 how are data currently being entered
 
@@ -49,6 +56,7 @@ will need help with sorting logic
 
 TO DO
 categorysection.jsx find stock image for each category and replace the stock image
+
 
 
 

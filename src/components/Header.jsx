@@ -4,13 +4,26 @@ import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import "../styles/Header.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faShoppingCart, faSearch, faUser } from '@fortawesome/free-solid-svg-icons';
 
-const Header = React.memo(() => {
+const Header = React.memo(({ cartItemsCount }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [categoryDropdown, setCategoryDropdown] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+    // Close category dropdown when toggling menu
+    if (categoryDropdown) setCategoryDropdown(false);
+  };
+
+  const toggleCategoryDropdown = (e) => {
+    e.preventDefault();
+    setCategoryDropdown(!categoryDropdown);
+  };
+
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+    setCategoryDropdown(false);
   };
 
   return (
@@ -32,25 +45,52 @@ const Header = React.memo(() => {
               <Link
                 to="/"
                 className="nav-link"
-                onClick={() => setMenuOpen(false)}
+                onClick={handleLinkClick}
               >
                 Home
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                to="/shop"
-                className="nav-link"
-                onClick={() => setMenuOpen(false)}
+            <li className="nav-item dropdown">
+              <a 
+                href="#" 
+                className="nav-link dropdown-toggle"
+                onClick={toggleCategoryDropdown}
               >
-                Coins
-              </Link>
+                Shop <i className={`fas ${categoryDropdown ? 'fa-caret-up' : 'fa-caret-down'}`}></i>
+              </a>
+              <ul className={`dropdown-menu ${categoryDropdown ? 'active' : ''}`}>
+                <li>
+                  <Link to="/us-coins" className="dropdown-item" onClick={handleLinkClick}>
+                    US Coins
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/world-coins" className="dropdown-item" onClick={handleLinkClick}>
+                    World Coins
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/bullion" className="dropdown-item" onClick={handleLinkClick}>
+                    Bullion
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/currency" className="dropdown-item" onClick={handleLinkClick}>
+                    Currency
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/shop" className="dropdown-item" onClick={handleLinkClick}>
+                    All Products
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li className="nav-item">
               <Link
                 to="/services"
                 className="nav-link"
-                onClick={() => setMenuOpen(false)}
+                onClick={handleLinkClick}
               >
                 Services
               </Link>
@@ -59,7 +99,7 @@ const Header = React.memo(() => {
               <Link
                 to="/about"
                 className="nav-link"
-                onClick={() => setMenuOpen(false)}
+                onClick={handleLinkClick}
               >
                 About
               </Link>
@@ -68,12 +108,25 @@ const Header = React.memo(() => {
               <Link
                 to="/contact"
                 className="nav-link"
-                onClick={() => setMenuOpen(false)}
+                onClick={handleLinkClick}
               >
                 Contact
               </Link>
             </li>
           </ul>
+          
+          <div className="nav-icons">
+            <Link to="/search" className="nav-icon" onClick={handleLinkClick}>
+              <FontAwesomeIcon icon={faSearch} />
+            </Link>
+            <Link to="/cart" className="nav-icon cart-icon" onClick={handleLinkClick}>
+              <FontAwesomeIcon icon={faShoppingCart} />
+              {cartItemsCount > 0 && <span className="cart-count">{cartItemsCount}</span>}
+            </Link>
+            <Link to="/account" className="nav-icon" onClick={handleLinkClick}>
+              <FontAwesomeIcon icon={faUser} />
+            </Link>
+          </div>
         </nav>
       </div>
     </header>

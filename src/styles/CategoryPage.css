@@ -1,9 +1,9 @@
-/* styles/ShopPage.css */
-.shop-page {
+/* styles/CategoryPage.css */
+.category-page {
   min-height: 80vh;
 }
 
-.shop-hero {
+.category-hero {
   background: linear-gradient(rgba(33, 33, 33, 0.8), rgba(33, 33, 33, 0.9)), url('/images/shop-background.jpg') center/cover no-repeat;
   padding: 4rem 0;
   text-align: center;
@@ -11,7 +11,7 @@
   margin-bottom: 3rem;
 }
 
-.shop-hero h1 {
+.category-hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -38,14 +38,14 @@
   outline: none;
 }
 
-.shop-content {
+.category-content {
   display: grid;
   grid-template-columns: 250px 1fr;
   gap: 2rem;
   margin-bottom: 3rem;
 }
 
-.shop-sidebar {
+.category-sidebar {
   background-color: var(--primary);
   border-radius: 4px;
   padding: 1.5rem;
@@ -86,6 +86,30 @@
   gap: 0.5rem;
 }
 
+.filter-scrollable {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.filter-scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+
+.filter-scrollable::-webkit-scrollbar-track {
+  background: var(--gray-dark);
+  border-radius: 3px;
+}
+
+.filter-scrollable::-webkit-scrollbar-thumb {
+  background: var(--gray);
+  border-radius: 3px;
+}
+
+.filter-scrollable::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
 .filter-option {
   display: flex;
   align-items: center;
@@ -122,6 +146,16 @@
   cursor: pointer;
   color: var(--light);
   font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.count {
+  font-size: 0.8rem;
+  color: var(--gray-light);
+  opacity: 0.7;
+  margin-left: 0.5rem;
 }
 
 .price-range-inputs {
@@ -185,11 +219,11 @@
   box-shadow: none;
 }
 
-.shop-products {
+.category-products {
   flex: 1;
 }
 
-.shop-header {
+.category-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -250,18 +284,18 @@
 }
 
 @media (max-width: 992px) {
-  .shop-content {
+  .category-content {
     grid-template-columns: 220px 1fr;
     gap: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .shop-content {
+  .category-content {
     grid-template-columns: 1fr;
   }
   
-  .shop-sidebar {
+  .category-sidebar {
     position: static;
     margin-bottom: 2rem;
   }

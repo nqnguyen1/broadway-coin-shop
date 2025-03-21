@@ -1,56 +1,38 @@
-// pages/ShopPage.js
+// pages/CurrencyPage.js
 import React, { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
-import '../styles/ShopPage.css';
 
-const categories = [
-  { id: "all", name: "All Items" },
-  { id: "us-coins", name: "US Coins" },
-  { id: "world-coins", name: "World Coins" },
-  { id: "bullion", name: "Bullion" },
-  { id: "currency", name: "Currency" }
-];
-const ShopPage = ( {allProducts} ) => {
+import '../styles/CategoryPage.css';
+
+const CurrencyPage = ({ allProducts }) => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState([0, 5000]);
   const [sortOption, setSortOption] = useState('featured');
   const [searchTerm, setSearchTerm] = useState('');
   
-  const location = useLocation();
-  const navigate = useNavigate();
-  
   useEffect(() => {
-    // Get category from URL query params if present
-    const params = new URLSearchParams(location.search);
-    const categoryParam = params.get('category');
-    
-    if (categoryParam) {
-      setSelectedCategory(categoryParam);
-    }
-    
-    // Initialize products
     setLoading(true);
-    try {
-      setProducts(allProducts);
-      setLoading(false);
-    } catch (error) {
-      console.error('Error loading products:', error);
-      setLoading(false);
-    }
-  }, [location.search, allProducts]);
+    
+    // Filter currency products from all products
+    const currencyItems = allProducts.filter(product => 
+      product.category === 'currency' || 
+      (product.Type && (
+        product.Type.toLowerCase().includes('note') || 
+        product.Type.toLowerCase().includes('bill') ||
+        product.Type.toLowerCase().includes('certificate')
+      ))
+    );
+    
+    setProducts(currencyItems);
+    setLoading(false);
+  }, [allProducts]);
   
-  // Filter and sort products when filters change
+  // Filter products when filters change
   useEffect(() => {
     let result = [...products];
-    
-    // Category filter
-    if (selectedCategory !== 'all') {
-      result = result.filter(product => product.category === selectedCategory);
-    }
     
     // Price range filter
     result = result.filter(product => {
@@ -82,7 +64,6 @@ const ShopPage = ( {allProducts} ) => {
         result.sort((a, b) => parseFloat(b.Price || b.price) - parseFloat(a.Price || a.price));
         break;
       case 'newest':
-        // Sort by Date field for coins that have it, otherwise default order
         result.sort((a, b) => {
           if (!a.Date && !b.Date) return 0;
           if (!a.Date) return 1;
@@ -103,13 +84,7 @@ const ShopPage = ( {allProducts} ) => {
     }
     
     setFilteredProducts(result);
-  }, [products, selectedCategory, priceRange, sortOption, searchTerm]);
-  
-  const handleCategoryChange = (categoryId) => {
-    setSelectedCategory(categoryId);
-    // Update URL to reflect category change
-    navigate(`/shop?category=${categoryId}`);
-  };
+  }, [products, priceRange, sortOption, searchTerm]);
   
   const handlePriceRangeChange = (e, index) => {
     const newRange = [...priceRange];
@@ -126,16 +101,14 @@ const ShopPage = ( {allProducts} ) => {
   };
   
   const clearFilters = () => {
-    setSelectedCategory('all');
     setPriceRange([0, 5000]);
     setSortOption('featured');
     setSearchTerm('');
-    navigate('/shop');
   };
   
   if (loading) {
     return (
-      <div className="shop-page loading">
+      <div className="category-page loading">
         <div className="container">
           <div className="loading-spinner">
             <i className="fas fa-spinner fa-spin"></i>
@@ -150,11 +123,11 @@ const ShopPage = ( {allProducts} ) => {
   const maxPrice = Math.max(...products.map(p => parseFloat(p.Price || p.price) || 0)) + 100;
   
   return (
-    <div className="shop-page">
-      <div className="shop-hero">
+    <div className="category-page">
+      <div className="category-hero">
         <div className="container">
-          <h1>Our Collection</h1>
-          <p>Browse our extensive range of rare and collectible items</p>
+          <h1>Currency</h1>
+          <p>Explore our collection of paper money and banknotes</p>
         </div>
       </div>
       
@@ -162,34 +135,15 @@ const ShopPage = ( {allProducts} ) => {
         <div className="search-bar">
           <input 
             type="text" 
-            placeholder="Search by type, date, or description..." 
+            placeholder="Search currency products..." 
             value={searchTerm}
             onChange={handleSearch}
             className="search-input"
           />
         </div>
         
-        <div className="shop-content">
-          <aside className="shop-sidebar">
-            <div className="filter-section">
-              <h3>Categories</h3>
-              <div className="filter-options">
-                {categories.map(category => (
-                  <div className="filter-option" key={category.id}>
-                    <input 
-                      type="radio" 
-                      id={`category-${category.id}`} 
-                      name="category" 
-                      value={category.id} 
-                      checked={selectedCategory === category.id} 
-                      onChange={() => handleCategoryChange(category.id)} 
-                    />
-                    <label htmlFor={`category-${category.id}`}>{category.name}</label>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
+        <div className="category-content">
+          <aside className="category-sidebar">
             <div className="filter-section">
               <h3>Price Range</h3>
               <div className="price-range-inputs">
@@ -223,8 +177,8 @@ const ShopPage = ( {allProducts} ) => {
             </button>
           </aside>
           
-          <div className="shop-products">
-            <div className="shop-header">
+          <div className="category-products">
+            <div className="category-header">
               <div className="product-count">
                 {filteredProducts.length} products found
               </div>
@@ -256,10 +210,9 @@ const ShopPage = ( {allProducts} ) => {
                       description: product.description || `${product.Denomination || ''} ${product.Grade || ''}`,
                       price: parseFloat(product.Price || product.price),
                       image: product.image,
-                      category: product.category,
+                      category: 'currency',
                       inStock: product.Status === "Available" || product.inStock
                     }}
-                 
                   />
                 ))
               ) : (
@@ -281,4 +234,4 @@ const ShopPage = ( {allProducts} ) => {
   );
 };
 
-export default ShopPage;
+export default CurrencyPage;

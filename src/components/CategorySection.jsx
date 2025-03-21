@@ -22,7 +22,7 @@ const categories = [
     id: 3,
     name: "Bullion",
     image: "../assets/images/placeholder.jpg",
-    slug: "rare-bullions",
+    slug: "bullion",
   },
   {
     id: 4,

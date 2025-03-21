@@ -1,11 +1,17 @@
+// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: '0.0.0.0', // Listen on all available network interfaces
-    port: 5173 // Default Vite port, you can change this if needed
+    proxy: {
+      // Prefix all API calls with /api
+      '/api': {
+        target: 'http://nqnuyen.site',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
   }
 })
