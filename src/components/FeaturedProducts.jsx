@@ -11,6 +11,7 @@ const FeaturedProducts = ({ allProducts }) => {
   const [itemsPerSlide, setItemsPerSlide] = useState(3);
   const [touchStartX, setTouchStartX] = useState(0);
   const [touchEndX, setTouchEndX] = useState(0);
+  const [trackHeight, setTrackHeight] = useState("auto");
 
   useEffect(() => {
     const feature = allProducts.filter((product) => product.featured);
@@ -34,6 +35,19 @@ const FeaturedProducts = ({ allProducts }) => {
       window.removeEventListener('resize', handleResize);
     };
   }, [allProducts]);
+
+  // Calculate and set the height of the carousel track after slide change or resize
+  useEffect(() => {
+    if (carouselRef.current) {
+      // Get the active slide
+      const activeSlide = carouselRef.current.children[currentIndex];
+      if (activeSlide) {
+        // Get the height of the active slide
+        const slideHeight = activeSlide.offsetHeight;
+        setTrackHeight(`${slideHeight}px`);
+      }
+    }
+  }, [currentIndex, itemsPerSlide, featuredProducts]);
 
   const totalSlides = Math.ceil(featuredProducts.length / itemsPerSlide);
 
@@ -71,12 +85,6 @@ const FeaturedProducts = ({ allProducts }) => {
       prevSlide();
     }
   };
-  
-  // Calculate visible products for current slide
-  const visibleProducts = featuredProducts.slice(
-    currentIndex * itemsPerSlide,
-    (currentIndex * itemsPerSlide) + itemsPerSlide
-  );
 
   return (
     <section className="featured-coins">
@@ -90,7 +98,10 @@ const FeaturedProducts = ({ allProducts }) => {
         <div className="carousel-container">
           <div 
             className="carousel-track"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            style={{ 
+              transform: `translateX(-${currentIndex * 100}%)`,
+              minHeight: trackHeight
+            }}
             ref={carouselRef}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
@@ -124,10 +135,10 @@ const FeaturedProducts = ({ allProducts }) => {
             ))}
           </div>
           
-          <button className="carousel-control carousel-prev" onClick={prevSlide}>
+          <button className="carousel-control carousel-prev" onClick={prevSlide} aria-label="Previous slide">
             &lt;
           </button>
-          <button className="carousel-control carousel-next" onClick={nextSlide}>
+          <button className="carousel-control carousel-next" onClick={nextSlide} aria-label="Next slide">
             &gt;
           </button>
           

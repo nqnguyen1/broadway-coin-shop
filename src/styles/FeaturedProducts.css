@@ -3,6 +3,10 @@
   padding: 4rem 0;
 }
 
+/* .section-title{
+  margin-bottom: 1rem;
+} */
+
 .coins-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -15,7 +19,7 @@
   margin-top: 2rem;
 }
 
-/* Carousel Styles */
+
 .carousel-container {
   position: relative;
   overflow: hidden;
@@ -37,7 +41,7 @@
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
-  margin: 0;
+  margin: 2rem;
 }
 
 .carousel-control {

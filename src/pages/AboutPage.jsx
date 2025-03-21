@@ -150,9 +150,13 @@ const AboutPage = () => {
 
             <div className="values-grid">
               <div className="value-card">
-                <div className="value-icon">
-                  <i className="fas fa-check-circle"></i>
-                </div>
+              <div className="value-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="40" fill="#E0B73B"/>
+  
+  <path d="M 30,50 L 45,65 L 70,35" fill="none" stroke="#333333" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+           </div>
                 <h3>Authenticity</h3>
                 <p>
                   Every item in our inventory undergoes rigorous authentication
@@ -161,9 +165,13 @@ const AboutPage = () => {
               </div>
 
               <div className="value-card">
-                <div className="value-icon">
-                  <i className="fas fa-handshake"></i>
-                </div>
+              <div className="value-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="40" fill="#E0B73B"/>
+  
+  <path d="M 50,20 L 30,28 C 30,48 38,65 50,77 C 62,65 70,48 70,28 L 50,20 Z" fill="none" stroke="#333333" stroke-width="5"/>
+</svg>
+</div>
                 <h3>Integrity</h3>
                 <p>
                   We believe in transparent business practices and fair pricing
@@ -173,7 +181,13 @@ const AboutPage = () => {
 
               <div className="value-card">
                 <div className="value-icon">
-                  <i className="fas fa-book"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="40" fill="#E0B73B"/>
+  
+  <path d="M 20,45 L 50,30 L 80,45 L 50,60 Z" fill="#333333"/>
+  <rect x="48" y="60" width="4" height="15" fill="#333333"/>
+  <rect x="40" y="75" width="20" height="3" fill="#333333"/>
+</svg>
                 </div>
                 <h3>Education</h3>
                 <p>
@@ -184,7 +198,23 @@ const AboutPage = () => {
 
               <div className="value-card">
                 <div className="value-icon">
-                  <i className="fas fa-users"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="40" fill="#E0B73B"/>
+  
+ 
+  <circle cx="50" cy="35" r="8" fill="#333333"/>
+  <path d="M 50,43 L 50,65" stroke="#333333" stroke-width="4" stroke-linecap="round"/>
+  
+  <circle cx="30" cy="40" r="7" fill="#333333"/>
+  <path d="M 30,47 L 30,65" stroke="#333333" stroke-width="3.5" stroke-linecap="round"/>
+  
+  <circle cx="70" cy="40" r="7" fill="#333333"/>
+  <path d="M 70,47 L 70,65" stroke="#333333" stroke-width="3.5" stroke-linecap="round"/>
+  
+  <path d="M 36,50 L 64,50" stroke="#333333" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 30,55 L 50,55" stroke="#333333" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 50,55 L 70,55" stroke="#333333" stroke-width="3" stroke-linecap="round"/>
+</svg>
                 </div>
                 <h3>Community</h3>
                 <p>

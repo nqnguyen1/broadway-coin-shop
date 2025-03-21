@@ -33,18 +33,12 @@
   margin-bottom: 2.5rem;
 }
 
-.info-icon {
-  width: 50px;
-  height: 50px;
-  background-color: var(--primary);
-  border: 1px solid var(--secondary);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Updated to include SVG styling for main contact icons */
+.info-item svg {
+  width: 36px; /* Reduced from default size */
+  height: 36px; /* Reduced from default size */
   margin-right: 1.5rem;
-  font-size: 1.2rem;
-  color: var(--secondary);
+  flex-shrink: 0; /* Prevent SVG from shrinking */
 }
 
 .info-content h3 {
@@ -80,6 +74,13 @@
   align-items: center;
   color: var(--light);
   transition: all 0.3s;
+}
+
+/* Added specific styles for social media SVGs */
+.social-icon svg {
+  width: 24px;
+  height: 24px;
+  display: block; /* Ensures proper display */
 }
 
 .social-icon:hover {
@@ -233,9 +234,12 @@
     text-align: center;
   }
 
-  .info-icon {
+  /* Updated for responsive behavior */
+  .info-item svg {
     margin-right: 0;
     margin-bottom: 1rem;
+    width: 32px; /* Even smaller on mobile */
+    height: 32px;
   }
 
   .social-links {
@@ -246,6 +250,19 @@
     justify-content: center;
   }
 
+  /* Ensure social icons remain visible on small screens */
+  .social-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px; /* Ensure fixed size */
+    min-height: 36px; /* Ensure fixed size */
+  }
+  
+  .social-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
   .contact-form-container h2 {
     text-align: center;
   }
@@ -253,5 +270,18 @@
   .contact-form-container h2::after {
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 576px) {
+  /* Ensure SVGs stay visible on very small screens */
+  .social-icons {
+    flex-wrap: wrap; /* Allow wrapping on very small screens */
+    justify-content: center;
+  }
+  
+  .social-icon {
+    margin-bottom: 10px; /* Add spacing between rows if they wrap */
   }
 }

@@ -83,7 +83,10 @@
     align-items: center;
     margin: 0 auto 1.5rem;
     font-size: 1.8rem;
+    transform: scale(1.4);
   }
+
+
   
   .service-card h3 {
     font-size: 1.5rem;

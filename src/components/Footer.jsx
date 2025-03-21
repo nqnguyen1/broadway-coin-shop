@@ -11,11 +11,11 @@ const Footer = () => {
         <div className="footer-content">
           {/* Left Section: Logo and About */}
           <div className="footer-about">
-          <img
-            src={logo}
-            className="logo"
-            alt="Broadway Coin & Stamp Exchange Logo"
-          />
+            <img
+              src={logo}
+              className="logo"
+              alt="Broadway Coin & Stamp Exchange Logo"
+            />
             <h3>Broadway Coin & Stamp Exchange</h3>
             <p>
               We are specialists in the buying and selling of rare coins, bullion,
@@ -23,49 +23,48 @@ const Footer = () => {
             </p>
             <div className="social-links">
               <a href="https://facebook.com" className="social-link" target="_blank" rel="noopener noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <circle cx="12" cy="12" r="11" fill="#4e4e4e"/>
-  <path d="M13.5 8.5h2v-2h-2c-1.7 0-3 1.3-3 3v1.5h-2v2h2v5h2v-5h2l0.5-2h-2.5V9.5c0-0.6 0.4-1 1-1z" fill="white"/>
-</svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <circle cx="12" cy="12" r="11" fill="#4e4e4e"/>
+                  <path d="M13.5 8.5h2v-2h-2c-1.7 0-3 1.3-3 3v1.5h-2v2h2v5h2v-5h2l0.5-2h-2.5V9.5c0-0.6 0.4-1 1-1z" fill="white"/>
+                </svg>
               </a>
               <a href="https://twitter.com" className="social-link" target="_blank" rel="noopener noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <circle cx="12" cy="12" r="11" fill="#4e4e4e"/>
-  <path d="M18 8.6c-0.5 0.2-1 0.4-1.5 0.4 0.5-0.3 1-0.8 1.2-1.4-0.5 0.3-1 0.5-1.6 0.6-0.5-0.5-1.1-0.8-1.8-0.8-1.4 0-2.5 1.1-2.5 2.5 0 0.2 0 0.4 0.1 0.6-2.1-0.1-3.9-1.1-5.1-2.6-0.2 0.4-0.3 0.8-0.3 1.3 0 0.9 0.4 1.6 1.1 2.1-0.4 0-0.8-0.1-1.1-0.3v0c0 1.2 0.9 2.2 2 2.4-0.2 0.1-0.4 0.1-0.7 0.1-0.2 0-0.3 0-0.5-0.1 0.3 1 1.2 1.7 2.3 1.7-0.8 0.7-1.9 1-3 1-0.2 0-0.4 0-0.6 0 1.1 0.7 2.4 1.1 3.7 1.1 4.5 0 6.9-3.7 6.9-6.9v-0.3c0.5-0.3 0.9-0.8 1.2-1.3z" fill="white"/>
-</svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <circle cx="12" cy="12" r="11" fill="#4e4e4e"/>
+                  <path d="M18 8.6c-0.5 0.2-1 0.4-1.5 0.4 0.5-0.3 1-0.8 1.2-1.4-0.5 0.3-1 0.5-1.6 0.6-0.5-0.5-1.1-0.8-1.8-0.8-1.4 0-2.5 1.1-2.5 2.5 0 0.2 0 0.4 0.1 0.6-2.1-0.1-3.9-1.1-5.1-2.6-0.2 0.4-0.3 0.8-0.3 1.3 0 0.9 0.4 1.6 1.1 2.1-0.4 0-0.8-0.1-1.1-0.3v0c0 1.2 0.9 2.2 2 2.4-0.2 0.1-0.4 0.1-0.7 0.1-0.2 0-0.3 0-0.5-0.1 0.3 1 1.2 1.7 2.3 1.7-0.8 0.7-1.9 1-3 1-0.2 0-0.4 0-0.6 0 1.1 0.7 2.4 1.1 3.7 1.1 4.5 0 6.9-3.7 6.9-6.9v-0.3c0.5-0.3 0.9-0.8 1.2-1.3z" fill="white"/>
+                </svg>
               </a>
               <a href="https://instagram.com" className="social-link" target="_blank" rel="noopener noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <circle cx="12" cy="12" r="11" fill="#4e4e4e"/>
-  <circle cx="12" cy="12" r="3" fill="none" stroke="white" stroke-width="1.5"/>
-  <rect x="7" y="7" width="10" height="10" rx="2.5" ry="2.5" fill="none" stroke="white" stroke-width="1.5"/>
-  <circle cx="16" cy="8" r="1" fill="white"/>
-</svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <circle cx="12" cy="12" r="11" fill="#4e4e4e"/>
+                  <circle cx="12" cy="12" r="3" fill="none" stroke="white" stroke-width="1.5"/>
+                  <rect x="7" y="7" width="10" height="10" rx="2.5" ry="2.5" fill="none" stroke="white" stroke-width="1.5"/>
+                  <circle cx="16" cy="8" r="1" fill="white"/>
+                </svg>
               </a>
             </div>
           </div>
           
           {/* Middle Section: Contact Info */}
           <div className="footer-contact">
-          <h3 className="footer-special">Contact Info</h3>
-          <p className="footer-special">
-            <strong>Phone:</strong> <a href="tel:619-440-0362">619-440-0362</a>
-          </p>
-          <p>
-            <strong className="footer-special">Email:</strong>{" "}
-            <a href="mailto:greg@broadwaycoin.com">greg@broadwaycoin.com</a>
-          </p>
-          <p className="footer-special">
-            <strong>Business Hours:</strong>
-          </p>
-          <p>Mon-Sat: 9am - 5pm</p>
-
-          <p>Closed on Sunday</p>
-          <p className="footer-special">
-            <strong>Address:</strong>
-          </p>
-          <p>473 Broadway, El Cajon, CA 92021</p>
-        </div>
+            <h3 className="footer-special">Contact Info</h3>
+            <p className="footer-special">
+              <strong>Phone:</strong> <a href="tel:619-440-0362">619-440-0362</a>
+            </p>
+            <p>
+              <strong className="footer-special">Email:</strong>{" "}
+              <a href="mailto:greg@broadwaycoin.com">greg@broadwaycoin.com</a>
+            </p>
+            <p className="footer-special">
+              <strong>Business Hours:</strong>
+            </p>
+            <p>Mon-Sat: 9am - 5pm</p>
+            <p>Closed on Sunday</p>
+            <p className="footer-special">
+              <strong>Address:</strong>
+            </p>
+            <p>473 Broadway, El Cajon, CA 92021</p>
+          </div>
           
           {/* Right Section: Google Map Embed */}
           <div className="footer-map">

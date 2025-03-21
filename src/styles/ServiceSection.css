@@ -47,6 +47,24 @@
   align-items: center;
   margin: 0 auto 1.5rem;
   font-size: 1.5rem;
+  /* Added to ensure SVGs are properly contained and displayed */
+  overflow: visible;
+  position: relative;
+}
+
+/* Ensure SVGs maintain their visibility and are consistently sized */
+.service-icon svg {
+  width: 40px;
+  height: 40px;
+  display: block; /* Ensures block-level rendering */
+  max-width: 100%; /* Ensures SVG doesn't overflow */
+  max-height: 100%; /* Ensures SVG doesn't overflow */
+}
+
+/* Make sure all SVGs have similar visual size regardless of their internal scaling */
+.service-icon svg:nth-child(1),
+.service-icon svg:nth-child(3) {
+  transform: scale(1.4);
 }
 
 .service-title {
@@ -75,10 +93,22 @@
   .services-container {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
+  
+  /* Added to ensure SVGs remain visible at smaller screen sizes */
+  .service-icon {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 @media (max-width: 576px) {
   .services-container {
     grid-template-columns: 1fr;
+  }
+  
+  /* Added to fix SVG visibility on very small screens */
+  .service-icon {
+    position: relative;
+    z-index: 1;
   }
 }

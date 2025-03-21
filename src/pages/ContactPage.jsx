@@ -105,7 +105,7 @@ const ContactPage = () => {
 </svg>
               <div className="info-content">
                 <h3>Call Us</h3>
-                <p>+1 (619)-440-0362</p>
+                <p>+1 (619) 440 - 0362</p>
               </div>
             </div>
 
