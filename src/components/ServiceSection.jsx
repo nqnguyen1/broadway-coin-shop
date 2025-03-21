@@ -17,15 +17,15 @@ const services = [
       "Fair market prices whether you're looking to add to your collection or sell your numismatic treasures.",
     icon: "fas fa-exchange-alt",
   },
+  // {
+  //   id: 3,
+  //   title: "Secure Storage",
+  //   description:
+  //     "Climate-controlled storage solutions to preserve the condition and value of your rare coins.",
+  //   icon: "fas fa-shield-alt",
+  // },
   {
     id: 3,
-    title: "Secure Storage",
-    description:
-      "Climate-controlled storage solutions to preserve the condition and value of your rare coins.",
-    icon: "fas fa-shield-alt",
-  },
-  {
-    id: 4,
     title: "Appraisal",
     description:
       "Professional appraisal services for insurance, estate planning, or personal knowledge.",

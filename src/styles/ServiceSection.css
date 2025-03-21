@@ -25,6 +25,10 @@
   text-align: center;
   transition: transform 0.3s;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
 }
 
 .service-card:hover {
@@ -51,6 +55,15 @@
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 1px;
+  /* Add these properties to handle longer titles */
+  width: 100%;
+  min-height: 2.6rem; /* Gives consistent height for title area */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  hyphens: auto; /* Allows hyphenation for very long words */
+  word-wrap: break-word; /* Ensures words break properly */
 }
 
 .service-desc {

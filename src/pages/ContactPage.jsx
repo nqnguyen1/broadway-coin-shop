@@ -80,9 +80,9 @@ const ContactPage = () => {
               <div className="info-content">
                 <h3>Visit Our Store</h3>
                 <p>
-                  123 Broadway Avenue
+                473 Broadway
                   <br />
-                  New York, NY 10001
+                  El Cajon, CA 92021
                   <br />
                   United States
                 </p>
@@ -95,8 +95,7 @@ const ContactPage = () => {
               </div>
               <div className="info-content">
                 <h3>Call Us</h3>
-                <p>+1 (212) 555-1234</p>
-                <p>+1 (212) 555-5678</p>
+                <p>+1 (619)-440-0362</p>
               </div>
             </div>
 
@@ -106,8 +105,7 @@ const ContactPage = () => {
               </div>
               <div className="info-content">
                 <h3>Email Us</h3>
-                <p>info@broadwaycoin.com</p>
-                <p>sales@broadwaycoin.com</p>
+                <p>greg@broadwaycoin.com</p>
               </div>
             </div>
 
@@ -117,8 +115,7 @@ const ContactPage = () => {
               </div>
               <div className="info-content">
                 <h3>Opening Hours</h3>
-                <p>Monday-Friday: 9:00 AM - 6:00 PM</p>
-                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                <p>Mon-Sat: 9am - 5pm</p>
                 <p>Sunday: Closed</p>
               </div>
             </div>

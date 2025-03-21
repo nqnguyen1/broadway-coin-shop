@@ -58,31 +58,15 @@ const ServicesPage = () => {
                 </ul>
               </div>
               
-              <div className="service-card">
-                <div className="service-icon">
-                  <i className="fas fa-shield-alt"></i>
-                </div>
-                <h3>Secure Storage Solutions</h3>
-                <p>
-                  Protect your valuable collection with our state-of-the-art storage facilities. We offer climate-controlled, 
-                  secure storage options with comprehensive insurance coverage for collections of all sizes.
-                </p>
-                <ul className="service-details">
-                  <li>Climate-controlled environment</li>
-                  <li>24/7 security monitoring</li>
-                  <li>Individual storage options</li>
-                  <li>Fully insured and bonded facility</li>
-                </ul>
-              </div>
               
-              <div className="service-card">
+              
+              {/* <div className="service-card">
                 <div className="service-icon">
                   <i className="fas fa-graduation-cap"></i>
                 </div>
                 <h3>Appraisal Services</h3>
                 <p>
-                  Our certified appraisers provide detailed valuations for insurance, estate planning, or market knowledge purposes. 
-                  Each appraisal includes comprehensive documentation of your collection's current market value.
+                Whether you’re exploring a sale or simply seeking expert guidance, our approach keeps the process simple and direct.
                 </p>
                 <ul className="service-details">
                   <li>Insurance appraisals</li>
@@ -90,41 +74,10 @@ const ServicesPage = () => {
                   <li>Investment portfolio assessment</li>
                   <li>Detailed written appraisal reports</li>
                 </ul>
-              </div>
+              </div> */}
+            
               
-              <div className="service-card">
-                <div className="service-icon">
-                  <i className="fas fa-search-dollar"></i>
-                </div>
-                <h3>Investment Consulting</h3>
-                <p>
-                  Make informed decisions about numismatic and philatelic investments with guidance from our market experts. 
-                  We help collectors and investors identify opportunities that align with their investment goals.
-                </p>
-                <ul className="service-details">
-                  <li>Market trend analysis</li>
-                  <li>Portfolio diversification advice</li>
-                  <li>Acquisition strategies</li>
-                  <li>Long-term investment planning</li>
-                </ul>
-              </div>
-              
-              <div className="service-card">
-                <div className="service-icon">
-                  <i className="fas fa-book-open"></i>
-                </div>
-                <h3>Educational Resources</h3>
-                <p>
-                  Expand your knowledge with our educational programs, workshops, and reference materials. 
-                  We believe informed collectors make better decisions and enjoy the hobby more deeply.
-                </p>
-                <ul className="service-details">
-                  <li>Collector workshops and seminars</li>
-                  <li>Reference library access</li>
-                  <li>One-on-one collecting consultations</li>
-                  <li>Newsletter with market insights</li>
-                </ul>
-              </div>
+             
             </div>
           </section>
           
@@ -158,100 +111,6 @@ const ServicesPage = () => {
             </div>
           </section>
           
-          {/* Service Rates Section */}
-          <section className="service-rates">
-            <h2>Service Rates</h2>
-            <p className="rates-intro">
-              Our service rates are competitive and transparent. Below are our standard rates for common services. 
-              For complex collections or specialized services, please contact us for a custom quote.
-            </p>
-            
-            <div className="rates-tables">
-              <div className="rate-table">
-                <h3>Authentication & Grading</h3>
-                <table>
-                  <tbody>
-                    <tr>
-                      <th>Service</th>
-                      <th>Rate</th>
-                    </tr>
-                    <tr>
-                      <td>Basic Authentication</td>
-                      <td>$25 per item</td>
-                    </tr>
-                    <tr>
-                      <td>Authentication with Grading</td>
-                      <td>$45 per item</td>
-                    </tr>
-                    <tr>
-                      <td>Expedited Service</td>
-                      <td>Additional $20 per item</td>
-                    </tr>
-                    <tr>
-                      <td>Third-Party Submission</td>
-                      <td>$15 handling fee + grading costs</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              
-              <div className="rate-table">
-                <h3>Appraisal Services</h3>
-                <table>
-                  <tbody>
-                    <tr>
-                      <th>Service</th>
-                      <th>Rate</th>
-                    </tr>
-                    <tr>
-                      <td>Individual Item Appraisal</td>
-                      <td>$50 per item</td>
-                    </tr>
-                    <tr>
-                      <td>Collection Appraisal (up to 50 items)</td>
-                      <td>$200 flat fee</td>
-                    </tr>
-                    <tr>
-                      <td>Collection Appraisal (51+ items)</td>
-                      <td>$200 + $3 per additional item</td>
-                    </tr>
-                    <tr>
-                      <td>Written Appraisal Report</td>
-                      <td>$50 additional fee</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              
-              <div className="rate-table">
-                <h3>Storage Solutions</h3>
-                <table>
-                  <tbody>
-                    <tr>
-                      <th>Service</th>
-                      <th>Rate</th>
-                    </tr>
-                    <tr>
-                      <td>Small Safe Deposit Box</td>
-                      <td>$25 per month</td>
-                    </tr>
-                    <tr>
-                      <td>Medium Safe Deposit Box</td>
-                      <td>$40 per month</td>
-                    </tr>
-                    <tr>
-                      <td>Large Safe Deposit Box</td>
-                      <td>$60 per month</td>
-                    </tr>
-                    <tr>
-                      <td>Collection Storage (insured)</td>
-                      <td>0.5% of appraised value per year</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </section>
         </div>
         
         {/* Call to Action */}

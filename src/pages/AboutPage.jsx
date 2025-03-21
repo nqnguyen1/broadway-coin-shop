@@ -10,7 +10,7 @@ const AboutPage = () => {
       <div className="about-hero">
         <div className="container">
           <h1>About Broadway Coin & Stamp</h1>
-          <p>Serving collectors and numismatic enthusiasts for over 45 years</p>
+          <p>Serving collectors and numismatic enthusiasts for over 33 years</p>
         </div>
       </div>
 
@@ -20,22 +20,15 @@ const AboutPage = () => {
             <div className="about-text">
               <h2>Our Story</h2>
               <p>
-                Broadway Coin & Stamp was founded in 1975 by numismatic expert
-                James Broadway, whose passion for rare coins and stamps began as
-                a childhood hobby and transformed into a lifelong commitment to
-                the preservation and appreciation of these historical treasures.
+              Broadway Coin and Stamp Exchange has been located in the same Shopping center for over 33 year. We buy Sell and Trade, US and World wide Coins, Bullions, Medals, Tokens, Paper Money and Stamps. We also offer Appraisals, in store or at your Site. Call us, or if local come in and see us.
               </p>
               <p>
-                Starting with a small shop in downtown New York, our collection
-                and reputation have grown over the decades. Today, we are proud
-                to be one of the most trusted sources for authentic coins and
-                stamps for collectors, investors, and enthusiasts around the
-                world.
+              With years of experience in the precious metals industry, we provide trustworthy services for buying and selling gold and collectible items. Our knowledgeable staff is always available to answer your questions and help you make informed decisions about your investments. Whether you're looking to expand your collection or sell your items, we offer competitive rates and exceptional customer service.
               </p>
             </div>
             <div className="about-image">
               <img
-                src="/images/about/store-front.jpg"
+                src="http://broadwaycoin.com/images/placeholder.jpg"
                 alt="Broadway Coin & Stamp Store"
                 onError={(e) => {
                   e.target.onerror = null;
@@ -55,16 +48,12 @@ const AboutPage = () => {
                 collections.
               </p>
               <p>
-                We believe that coins and stamps are not just collectibles but
-                tangible connections to history, art, and culture. Through
-                meticulous authentication, expert curation, and exceptional
-                customer service, we aim to be your trusted partner in building
-                a collection that reflects your passion and investment goals.
+              We are committed to offering the highest quality gold, bullion, and stamps. Our collection features a wide variety of items, including rare coins and bullion bars sourced from reputable mints. We take pride in offering products that meet rigorous standards for authenticity and purity.
               </p>
             </div>
             <div className="about-image">
               <img
-                src="/images/about/authentication.jpg"
+                src="http://broadwaycoin.com/images/placeholder.jpg"
                 alt="Authentication Process"
                 onError={(e) => {
                   e.target.onerror = null;
@@ -74,7 +63,7 @@ const AboutPage = () => {
             </div>
           </div>
 
-          <div className="team-section">
+          {/* <div className="team-section">
             <h2>Meet Our Team</h2>
             <p className="team-intro">
               Our team consists of passionate experts with decades of combined
@@ -154,7 +143,7 @@ const AboutPage = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="values-section">
             <h2>Our Values</h2>

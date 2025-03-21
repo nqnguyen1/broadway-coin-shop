@@ -15,7 +15,7 @@ const HomePage = ({ allProducts}) => {
       <FeaturedProducts allProducts={allProducts}  />
       <ServiceSection />
       <TestimonialSection />
-      <NewsletterSection />
+      {/* <NewsletterSection /> */}
     </>
   );
 };
