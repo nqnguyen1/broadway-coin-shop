@@ -97,6 +97,8 @@ const ShopPage = ( {allProducts} ) => {
           return titleA.localeCompare(titleB);
         });
         break;
+        case "featured":
+          result.sort((a, b) => (a.featured === b.featured) ? 0 : a.featured ? -1 : 1);
       default:
         // 'featured' - no specific sort, use default order
         break;
@@ -257,7 +259,8 @@ const ShopPage = ( {allProducts} ) => {
                       price: parseFloat(product.Price || product.price),
                       image: product.image,
                       category: product.category,
-                      inStock: product.Status === "Available" || product.inStock
+                      inStock: product.Status === "Available" || product.inStock,
+                      featured: product.featured
                     }}
                  
                   />

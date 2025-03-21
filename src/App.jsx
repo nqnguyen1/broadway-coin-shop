@@ -53,6 +53,7 @@ function App() {
             "price": 45.0,
             "image": "http://broadwaycoin.com/images/placeholder.jpg",
             "category": "world-coins",
+            featured: true,
             "inStock": true
         },
         {
@@ -84,6 +85,7 @@ function App() {
           "price": 36.0,
           "image": "http://broadwaycoin.com/images/placeholder.jpg",
           "category": "bullion",
+          "featured": true,
           "inStock": true
       }
     ];
@@ -96,6 +98,7 @@ function App() {
           "price": 75.0,
           "image": "http://broadwaycoin.com/images/placeholder.jpg",
           "category": "currency",
+          "featured": true,
           "inStock": true
       },
       {

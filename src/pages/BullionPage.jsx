@@ -73,8 +73,9 @@ const BullionPage = ({  allProducts  }) => {
           return titleA.localeCompare(titleB);
         });
         break;
+        case "featured":
+        result.sort((a, b) => (a.featured === b.featured) ? 0 : a.featured ? -1 : 1);
       default:
-        // 'featured' - no specific sort, use default order
         break;
     }
     
@@ -206,7 +207,8 @@ const BullionPage = ({  allProducts  }) => {
                       price: parseFloat(product.Price || product.price),
                       image: product.image,
                       category: 'bullion',
-                      inStock: product.Status === "Available" || product.inStock
+                      inStock: product.Status === "Available" || product.inStock,
+                      featured: product.featured
                     }}
              
                   />
