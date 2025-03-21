@@ -7,12 +7,12 @@ import ServiceSection from "../components/ServiceSection";
 import TestimonialSection from "../components/TestimonialSection";
 import NewsletterSection from "../components/NewsletterSection";
 
-const HomePage = ({ addToCart }) => {
+const HomePage = ({ allProducts}) => {
   return (
     <>
       <HeroSection />
       <CategorySection />
-      <FeaturedProducts addToCart={addToCart} />
+      <FeaturedProducts allProducts={allProducts}  />
       <ServiceSection />
       <TestimonialSection />
       <NewsletterSection />

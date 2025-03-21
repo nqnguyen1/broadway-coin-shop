@@ -30,12 +30,7 @@ const categories = [
     image: "../assets/images/placeholder.jpg",
     slug: "currency",
   },
-  // {
-  //   id: 5,
-  //   name: "Ancient Coins",
-  //   image: "../assets/images/placeholder.jpg",
-  //   slug: "ancient-coins",
-  // },
+
 ];
 
 const CategorySection = () => {
@@ -51,7 +46,7 @@ const CategorySection = () => {
         <div className="featured-categories">
           {categories.map((category) => (
             <Link
-              to={`/shop?category=${category.slug}`}
+              to={`/${category.slug}`}
               key={category.id}
               className="category-card"
             >

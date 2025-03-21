@@ -17,7 +17,7 @@ export default function Logo() {
     <div className= "titleContainer">
          {
          width > 768 ? (
-              <h1 className= "title">Broadway Coin & Stamp Exchange</h1>
+              <h1 className= "title"><span style={{color:"white"}}>Broadway </span>Coin & Stamp Exchange</h1>
             ) :
         <div className="logoJS">
             <div>

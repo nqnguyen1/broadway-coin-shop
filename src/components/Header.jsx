@@ -59,6 +59,11 @@ const Header = React.memo(({ cartItemsCount }) => {
                 Shop <i className={`fas ${categoryDropdown ? 'fa-caret-up' : 'fa-caret-down'}`}></i>
               </a>
               <ul className={`dropdown-menu ${categoryDropdown ? 'active' : ''}`}>
+              <li>
+                  <Link to="/shop" className="dropdown-item" onClick={handleLinkClick}>
+                    All Products
+                  </Link>
+                </li>
                 <li>
                   <Link to="/us-coins" className="dropdown-item" onClick={handleLinkClick}>
                     US Coins
@@ -79,11 +84,7 @@ const Header = React.memo(({ cartItemsCount }) => {
                     Currency
                   </Link>
                 </li>
-                <li>
-                  <Link to="/shop" className="dropdown-item" onClick={handleLinkClick}>
-                    All Products
-                  </Link>
-                </li>
+
               </ul>
             </li>
             <li className="nav-item">
@@ -115,18 +116,7 @@ const Header = React.memo(({ cartItemsCount }) => {
             </li>
           </ul>
           
-          <div className="nav-icons">
-            <Link to="/search" className="nav-icon" onClick={handleLinkClick}>
-              <FontAwesomeIcon icon={faSearch} />
-            </Link>
-            <Link to="/cart" className="nav-icon cart-icon" onClick={handleLinkClick}>
-              <FontAwesomeIcon icon={faShoppingCart} />
-              {cartItemsCount > 0 && <span className="cart-count">{cartItemsCount}</span>}
-            </Link>
-            <Link to="/account" className="nav-icon" onClick={handleLinkClick}>
-              <FontAwesomeIcon icon={faUser} />
-            </Link>
-          </div>
+         
         </nav>
       </div>
     </header>

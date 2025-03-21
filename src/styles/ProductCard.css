@@ -127,37 +127,16 @@
   color: var(--secondary);
 }
 
-.add-to-cart {
-  background-color: var(--secondary);
-  color: var(--dark);
-  border: none;
-  border-radius: 2px;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: all 0.3s;
-  font-weight: 600;
-  font-size: 0.9rem;
+.coin-tags {
   display: flex;
-  align-items: center;
-  text-transform: uppercase;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.5rem;
 }
 
-.add-to-cart i {
-  margin-right: 5px;
-}
-
-.add-to-cart:hover {
-  background-color: var(--accent);
-}
-
-.add-to-cart.disabled {
-  background-color: var(--gray);
-  cursor: not-allowed;
-}
-
-.add-to-cart.disabled:hover {
-  background-color: var(--gray);
-  transform: none;
+.coin-tag.featured {
+  background-color: #DC143C; /* Crimson */
+  color: white;
 }
 
 @media (max-width: 768px) {
@@ -177,6 +156,7 @@
     font-size: 1.2rem;
   }
 }
+
 
 @media (max-width: 576px) {
   .coin-img {

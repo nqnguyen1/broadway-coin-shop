@@ -3,14 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/ProductCard.css';
 
-const ProductCard = ({ product, addToCart }) => {
-  const handleAddToCart = (e) => {
-    e.preventDefault();
-    if (addToCart && product.inStock) {
-      addToCart(product);
-    }
-  };
-
+const ProductCard = ({ product }) => {
   // Determine category tag display text and style
   const getCategoryTag = () => {
     switch(product.category) {
@@ -28,13 +21,18 @@ const ProductCard = ({ product, addToCart }) => {
   };
 
   const categoryTag = getCategoryTag();
-
+  
+  // Determine if product is featured
+  // You can customize this logic based on your criteria
+  console.log(product)
+  const isFeatured = product.featured 
+  
   return (
     <div className="coin-card">
       <Link to={`/product/${product.id}`}>
         <img 
-          src={product.image} 
-          alt={product.title} 
+          src={product.image}
+          alt={product.title}
           className="coin-img"
           onError={(e) => {
             e.target.onerror = null;
@@ -42,9 +40,17 @@ const ProductCard = ({ product, addToCart }) => {
           }}
         />
         <div className="coin-details">
-          <span className={`coin-tag ${categoryTag.className}`}>
-            {categoryTag.text}
-          </span>
+          <div className="coin-tags">
+            <span className={`coin-tag ${categoryTag.className}`}>
+              {categoryTag.text}
+            </span>
+            
+            {isFeatured && (
+              <span className="coin-tag featured">
+                Featured
+              </span>
+            )}
+          </div>
           
           <h3 className="coin-title">{product.title}</h3>
           <p className="coin-meta">{product.description}</p>
@@ -55,14 +61,8 @@ const ProductCard = ({ product, addToCart }) => {
           )}
           
           <div className="coin-footer">
-            <span className="view-details">View Details</span>
-            <button 
-              className={`add-to-cart ${!product.inStock ? 'disabled' : ''}`} 
-              onClick={handleAddToCart}
-              disabled={!product.inStock}
-            >
-              <i className="fas fa-shopping-cart"></i> Add
-            </button>
+            <span className="view-details">View Details </span>
+            <span> &rsaquo; </span>
           </div>
         </div>
       </Link>

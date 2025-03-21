@@ -17,21 +17,27 @@ import './styles/App.css';
 
 function App() {
   const [allProducts, setAllProducts] = useState([]);
+  const [featuredProducts, setFeaturedProducts] = useState([]);
 
   useEffect(() => {
     const loadProducts = async () => {
       const response = await fetch("/api/index.php?api_key=ab301ece-c99b-486c-9785-9871d9c034a1");
       const data = await response.json();
-      const tempFilteredProducts = data.map((product)=>{
+      const featured = []
+      const tempSuperProducts = data.map((product,index)=>{
         product.image = "http://broadwaycoin.com/images/placeholder.jpg"
         product.category = "us-coins"
         product.description = `This ${product.Date} ${product.Type} is a valuable addition to any collection. ${product.Grade ? `Graded ${product.Grade}, ` : ''}this piece represents an excellent example of ${product.Country || ''} coinage.`
         product.inStock = true
+        if(index > 124){
+          product.featured = true;
+        }
         return product
-      }) //do this filter steps in python when first add data to database
+      }) // make sure to add these 
       const sampleWorldCoins = [
         {
             "id": "w001",
+            "Country": "Great Britain",
             "title": "1889 British Crown",
             "description": "Queen Victoria - XF condition",
             "price": 89.0,
@@ -42,12 +48,23 @@ function App() {
         {
             "id": "w002",
             "title": "1954 Canada Dollar",
+            "Country": "Canada",
             "description": "Elizabeth II - AU condition",
             "price": 45.0,
             "image": "http://broadwaycoin.com/images/placeholder.jpg",
             "category": "world-coins",
             "inStock": true
-        }
+        },
+        {
+          "id": "w003",
+          "title": "1954 Australian Dollar",
+          "Country": "Australia",
+          "description": "Australian testing - AU condition",
+          "price": 65.0,
+          "image": "http://broadwaycoin.com/images/placeholder.jpg",
+          "category": "world-coins",
+          "inStock": true
+      }
     ];
 
     const sampleBullion = [
@@ -93,7 +110,7 @@ function App() {
    ];
 
   setAllProducts([
-    ...tempFilteredProducts,
+    ...tempSuperProducts,
     ...sampleWorldCoins, 
     ...sampleBullion, 
     ...sampleCurrency
@@ -113,7 +130,7 @@ function App() {
         <Header/>
         <main>
           <Routes>
-            <Route path="/" element={<HomePage/>} />
+            <Route path="/" element={<HomePage allProducts={allProducts} /> } />
             <Route path="/shop" element={<ShopPage allProducts={allProducts} /> } />
             <Route path="/product/:id" element={<ProductPage allProducts={allProducts}  />} />
             <Route path="/about" element={<AboutPage />} />
