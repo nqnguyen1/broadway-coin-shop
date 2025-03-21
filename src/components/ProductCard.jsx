@@ -24,7 +24,6 @@ const ProductCard = ({ product }) => {
   
   // Determine if product is featured
   // You can customize this logic based on your criteria
-  console.log(product)
   const isFeatured = product.featured 
   
   return (

@@ -92,12 +92,12 @@
 }
 
 .footer-special {
-  color: #ffd700;
+  color: var(--secondary);
   text-decoration: none;
 }
 
 .footer-contact a:hover {
-  color: var(--secondary);
+  color: #ffd700;
 }
 
 .footer-contact p {
@@ -138,7 +138,17 @@
   .footer-about img.logo {
     margin: 0 auto 1rem;
   }
-  
+
+  .footer-contact,
+  .footer-map {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .footer-map iframe {
+    width: 100%;
+    height: 250px;
+  }
   .social-links {
     justify-content: center;
   }
