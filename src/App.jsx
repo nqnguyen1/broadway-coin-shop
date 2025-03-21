@@ -14,14 +14,14 @@ import WorldCoinsPage from './pages/WorldCoinsPage';
 import BullionPage from './pages/BullionPage';
 import CurrencyPage from './pages/CurrencyPage';
 import './styles/App.css';
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 function App() {
   const [allProducts, setAllProducts] = useState([]);
   const [featuredProducts, setFeaturedProducts] = useState([]);
-
   useEffect(() => {
     const loadProducts = async () => {
-      const response = await fetch("/api/index.php?api_key=ab301ece-c99b-486c-9785-9871d9c034a1");
+      const response = await fetch(`${apiUrl}/index.php?api_key=ab301ece-c99b-486c-9785-9871d9c034a1`);
       const data = await response.json();
       const featured = []
       const tempSuperProducts = data.map((product,index)=>{
